@@ -1,0 +1,23 @@
+artifact_path: /home/alanv/projects/hydraulic-system-monitor/notebooks/mlruns/1/models/m-d499590261534f4c82e570043cf8893d/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.3
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+    skops_trusted_types: null
+mlflow_version: 3.11.1
+model_id: m-d499590261534f4c82e570043cf8893d
+model_size_bytes: 1314829
+model_uuid: m-d499590261534f4c82e570043cf8893d
+prompts: null
+run_id: 26aea6b1b05341b29c693f909ee3ea1f
+utc_time_created: '2026-04-23 15:08:54.688062'
