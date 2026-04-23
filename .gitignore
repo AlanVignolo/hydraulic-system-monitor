@@ -205,3 +205,25 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+cat > .gitignore << 'EOF'
+# Data
+data/
+
+# Modelos entrenados
+models/*.pkl
+
+# MLflow
+notebooks/mlruns/
+notebooks/mlflow.db
+mlruns/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Env
+.env
+EOF
