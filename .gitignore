@@ -210,9 +210,6 @@ cat > .gitignore << 'EOF'
 # Data
 data/
 
-# Modelos entrenados
-models/*.pkl
-
 # MLflow
 notebooks/mlruns/
 notebooks/mlflow.db
