@@ -5,11 +5,14 @@ Classifies the condition of 4 components (cooler, valve, pump, accumulator) from
 
 ---
 
-## Live Demo
+## Try It
 
-**API docs:** https://hydraulic-system-monitor-production.up.railway.app/docs
+```bash
+docker build -t hydraulic-monitor .
+docker run -p 8000:8000 hydraulic-monitor
+```
 
-> **Note:** deployed on Railway's free tier, which sleeps the service after periods of inactivity. If the link returns a 404 or times out, it's asleep — try again in ~30s, or run it locally with the steps below.
+Interactive API docs (Swagger UI) at `http://localhost:8000/docs`, or call it directly:
 
 **Example request:**
 ```bash
@@ -47,7 +50,7 @@ Each sensor array holds one full cycle of raw readings (length depends on the se
 
 17 sensors → feature engineering (136 features) → 4 ML models → REST API
 
-**Stack:** Python, scikit-learn, XGBoost, FastAPI, Docker, Railway
+**Stack:** Python, scikit-learn, XGBoost, FastAPI, Docker
 
 ---
 
@@ -120,11 +123,4 @@ uvicorn app.main:app --reload
 ```bash
 pip install -r requirements-dev.txt
 pytest tests/ -v
-```
-
-## Docker
-
-```bash
-docker build -t hydraulic-monitor .
-docker run -p 8000:8000 hydraulic-monitor
 ```
